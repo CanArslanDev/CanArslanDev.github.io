@@ -40305,9 +40305,9 @@ $S:40}
 A.RD.prototype={
 P(a){return new A.cP(new A.aM(0,3.6*$.bn.M()/100,0,0),A.jD(this.gaoB(),B.aI,B.fH,B.S),null)},
 gaoB(){var s=A.a([],t.p)
-s.push(this.V4("Simple Animation Progress Bar",$.aAI[0],""))
+s.push(this.V4("Simple Animation Progress Bar",$.aAI[0],"pub.dev/packages/simple_painter"))
 s.push(A.e_(null,null,3*$.b7.M()/100))
-s.push(this.V4("Simple Painter",$.aAI[1],""))
+s.push(this.V4("Simple Painter",$.aAI[1],"pub.dev/packages/simple_animation_progress_bar"))
 return s},
 V4(a,b,c){return new A.cG(new A.alH(this,b,c,a),null)}}
 A.alH.prototype={
