@@ -40416,7 +40416,7 @@ return A.azJ(r,s*q,B.mM,p,B.c2,n,o,m*a.geS())},
 $S:122}
 A.R9.prototype={
 P(a){var s=$.b4.M(),r=$.bn.M()
-return A.eR(B.ao,A.a([A.eh(A.nm("assets/images/wallpaper.png",B.At,null,null),100*r/100,100*s/100),B.ZZ,this.gagN()],t.p),B.D,B.as)},
+return A.eR(B.ao,A.a([A.eh(A.nm("assets/images/wallpaper.png",B.As,null,null),100*r/100,100*s/100),B.ZZ,this.gagN()],t.p),B.D,B.as)},
 gagN(){var s,r,q,p,o,n,m=null
 $.c2()
 s=$.bk().xr
@@ -40653,7 +40653,7 @@ A.bw(o).toString
 r=r.d
 if(r==null){r=self.window.devicePixelRatio
 if(r===0)r=1}r=s.bY(0,r).a*4
-s=r}return A.k6(A.nm("assets/images/black_hole.png",B.As,l,l),B.a6,B.a8,p,new A.aM(q,k,0,0),l,s)},
+s=r}return A.k6(A.nm("assets/images/black_hole.png",B.l4,l,l),B.a6,B.a8,p,new A.aM(q,k,0,0),l,s)},
 $S:283}
 A.Rd.prototype={
 P(a){var s=A.dc()?B.a_2:B.a_1,r=A.dc()?B.al:B.a_0,q=t.p
@@ -40735,7 +40735,7 @@ return A.fF(s,A.je(A.jL(this.c,s,1,B.dg,$.aFv(),s),s,s),B.v,s,s,new A.dU(q,s,s,B
 $S:287}
 A.Sy.prototype={
 P(a){var s=null
-return new A.dr(B.C,s,s,new A.k8(s,s,$.bn.M()/100,s,A.nm("assets/images/dock template.png",B.l4,8*$.bn.M()/100,s),s),s)}}
+return new A.dr(B.C,s,s,new A.k8(s,s,$.bn.M()/100,s,A.nm("assets/images/dock template.png",B.At,8*$.bn.M()/100,s),s),s)}}
 A.Vz.prototype={
 P(a){return new A.cG(new A.ap2(this),null)},
 gVM(){var s,r=$.J
@@ -88530,10 +88530,10 @@ B.Aw=new A.d9(0.5,B.bR,B.BT,B.Nb,10)
 B.Jm=A.a(s([B.Aw]),t.sq)
 B.aF=new A.Is(0,"rectangle")
 B.Ar=new A.dU(null,null,null,B.eI,B.Jm,null,B.aF)
-B.As=new A.n1(0,"fill")
-B.At=new A.n1(2,"cover")
+B.l4=new A.n1(0,"fill")
+B.As=new A.n1(2,"cover")
 B.eJ=new A.n1(3,"fitWidth")
-B.l4=new A.n1(4,"fitHeight")
+B.At=new A.n1(4,"fitHeight")
 B.hN=new A.n1(6,"scaleDown")
 B.dv=new A.Iq(0,"tight")
 B.l5=new A.Iq(5,"strut")
