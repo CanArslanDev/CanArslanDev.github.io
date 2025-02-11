@@ -7,6 +7,32 @@
     <title>Loading...</title>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const currentUrl = window.location.pathname;
+
+            // Eğer URL "/assets" ile başlıyorsa, Flutter'ın build/web/assets klasöründen yükle
+            if (currentUrl.startsWith("/assets")) {
+                // `assets/` içindeki dosyayı doğru yoldan alalım
+                const assetPath = currentUrl.replace(/^\/assets/, '/assets/assets');  // assets/assets altında
+
+                fetch(assetPath)
+                    .then(response => response.text())
+                    .then(content => {
+                        document.open();
+                        document.write(content);
+                        document.close();
+                    })
+                    .catch(error => {
+                        console.error("Error loading asset:", error);
+                        loadIndexHtml();  // Eğer asset yüklenemezse index.html'e yönlendir
+                    });
+            } else {
+                // Eğer "/assets" ile başlamıyorsa, index.html'i yükle
+                loadIndexHtml();
+            }
+        });
+
+        // index.html dosyasını yükleme fonksiyonu
+        function loadIndexHtml() {
             fetch("/index.html")
                 .then(response => response.text())
                 .then(html => {
@@ -15,7 +41,7 @@
                     document.close();
                 })
                 .catch(error => console.error("Error loading index.html:", error));
-        });
+        }
     </script>
 </head>
 
