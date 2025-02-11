@@ -6,27 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loading...</title>
     <script>
-        // GitHub Pages için path ayarlaması
-        (function () {
-            var path = window.location.pathname;
-            var redirectURL = path;
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentUrl = window.location.pathname;
 
-            // assets klasörü için özel kontrol
-            if (path.startsWith('/assets/')) {
-                redirectURL = path;
+            // Eğer URL "/assets" ile başlıyorsa, Flutter'ın build/web/assets klasöründen yükle
+            if (currentUrl.startsWith("/assets")) {
+                // Assets klasöründeki doğru yolu al (assets/assets yapısı için)
+                const assetPath = currentUrl.replace(/^\/assets/, '/assets/assets');
+
+                fetch(assetPath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Asset not found');
+                        }
+                        return response.text();
+                    })
+                    .then(content => {
+                        document.open();
+                        document.write(content);
+                        document.close();
+                    })
+                    .catch(error => {
+                        console.error("Error loading asset:", error);
+                        loadIndexHtml();  // Eğer asset yüklenemezse index.html'e yönlendir
+                    });
             } else {
-                // Ana sayfa yönlendirmesi için
-                redirectURL = '/';
+                // Eğer "/assets" ile başlamıyorsa, index.html'i yükle
+                loadIndexHtml();
             }
+        });
 
-            // Yönlendirme yapılıyor
-            window.location.replace(redirectURL);
-        })();
+        // index.html dosyasını yükleme fonksiyonu
+        function loadIndexHtml() {
+            fetch("/index.html")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Index not found');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.open();
+                    document.write(html);
+                    document.close();
+                })
+                .catch(error => {
+                    console.error("Error loading index.html:", error);
+                    window.location.href = "/"; // Son çare olarak ana sayfaya yönlendir
+                });
+        }
     </script>
 </head>
 
 <body>
-    <h1>Redirecting...</h1>
+    <h1>Loading...</h1>
 </body>
 
 </html>
