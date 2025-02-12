@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "7286bb9464f03030b2f80e6b6fcbb78a",
+const RESOURCES = {"flutter_bootstrap.js": "824194b8a57925847fe8a51e330df1dd",
 "version.json": "5e38f9504c5b96cc447d95b8ec60c7ad",
 "icon.png": "3799685226ee63c94990b50ecdacb99e",
 "index.html": "3cb8456b4ef5142b67bca2ba4e0837ec",
@@ -45,7 +45,7 @@ const RESOURCES = {"flutter_bootstrap.js": "7286bb9464f03030b2f80e6b6fcbb78a",
 "assets/assets/web/css/styles.css": "d5714f3acf9cd52243c1b633f7552712",
 "assets/assets/web/js/ascii-converter.js": "f6ad56cb6729c2ac90b356e789c070c9",
 "assets/assets/web/js/main.js": "be8386f0009a20f5576dbff107199729",
-"assets/assets/web/js/video-processor.js": "1b588521b3754ccb9fb1c2a447b97a58",
+"assets/assets/web/js/video-processor.js": "6897cbae11e10fdade321f6a70272958",
 "assets/assets/icons/x.svg": "1553344a2e32a33ae0c2d75949393eb9",
 "assets/assets/icons/instagram.svg": "3c120fbc9053d432bc4a257eb8f6ec4a",
 "assets/assets/icons/email.svg": "11610210690aa735a1138347a54dc8de",
