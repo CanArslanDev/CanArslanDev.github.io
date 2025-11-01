@@ -46175,6 +46175,7 @@ s=q.style
 s.height="100%"
 s=q.style
 s.width="100%"
+q.allow="autoplay; fullscreen"
 r.a=q
 return r.b.a=q},
 $S:333}
